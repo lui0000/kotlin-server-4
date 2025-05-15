@@ -27,4 +27,12 @@ dependencies {
     implementation(libs.logback.classic)
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
+
+    // Зависимости для Exposed
+    implementation("org.jetbrains.exposed:exposed-core:0.48.0")
+    implementation("org.jetbrains.exposed:exposed-dao:0.48.0") // Опционально, если будете использовать DAO
+    implementation("org.jetbrains.exposed:exposed-jdbc:0.48.0")
+
+    // Зависимость для PostgreSQL JDBC драйвера
+    implementation("org.postgresql:postgresql:42.7.3") // Актуальная версия на момент ответа
 }
